@@ -1,0 +1,12 @@
+1. What are Mocks?
+
+--Test stub
+--Test Spy
+--Mock Object
+
+Mocks::
+
+---Verifies behaviour (calls) to a method
+
+Spy::
+---
