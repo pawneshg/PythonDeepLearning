@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jun 02 08:23:36 2018
+
+@author: admin
+"""
+
+In [2]: datetime.now()
+Out[2]: datetime.datetime(2018, 6, 2, 8, 13, 46, 310000)
+
+In [3]: datetime.strptime("21/11/06 16:30:23", "%d/%m/%y %H:%M:%S")
+Out[3]: datetime.datetime(2006, 11, 21, 16, 30, 23)
+
+In [4]: dt = datetime.strptime("21/11/06 16:30:23", "%d/%m/%y %H:%M:%S")
+In [5]: dt.strftime("%A, %d. %B %Y %I:%M%p") 
+Out[5]: 'Tuesday, 21. November 2006 04:30PM' 
+
+In [6]: dtnow = datetime.now()
+In [7]: dtnow.strftime("%A, %d. %B %Y %I:%M%p")
+Out[7]: 'Saturday, 02. June 2018 08:17AM'
+
+In [8]:  dtmili = datetime.strptime("21/11/06 16:30:23,456", "%d/%m/%y %H:%M:%S,%f")
+In [9]:  dtmili.strftime("%A, %d. %B %Y %I:%M%p")                      
+Out[9]: 'Tuesday, 21. November 2006 04:30PM' 
+In [10]: dtmili 
+Out[10]: datetime.datetime(2006, 11, 21, 16, 30, 23, 456000) 
+
+In [11]: if dtnow > dtmili:                                    
+    ...:     print "yes" 
+    ...: 
+yes                                                                                  
+In [12]: if dtnow < dtmili:                
+    ...:     print "yes"                             
+    ...:                                                   
+    ...:                                               
+In [13]: dtmili2 = datetime.strptime("21/11/06 16:30:23,457", "%d/%m/%y %H:%M:%S,%f") 
+In [14]: dtmili2 > dtmili 
+Out[14]: True                                                     
+In [15]: dtmili2 < dtmili                
+Out[15]: False  
